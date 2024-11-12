@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+ <View
+     android:id="@+id/headerBackground"
+     android:layout_width="match_parent"
+     android:layout_height="56dp"
+     android:layout_alignParentTop="true"
+     android:layout_alignParentEnd="true"
+     android:background="#4682b4"
+     android:elevation="4dp"
+     android:padding="8dp"/>
+
+ <TextView
+     android:id="@+id/headerTitle"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/headerBackground"
+     android:layout_centerHorizontal="true"
+     android:layout_centerVertical="true"
+     android:layout_marginTop="-40dp"
+     android:text="Map App Win's"
+     android:textColor="@color/white"
+     android:textSize="18sp"
+     android:textStyle="bold"/>
+
+ <com.mapbox.mapboxsdk.maps.MapView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/mapView"
+     android:layout_below="@id/headerBackground">
+ </com.mapbox.mapboxsdk.maps.MapView>
+
+ <FrameLayout
+     android:id="@+id/compass_container"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_alignParentTop="true"
+     android:layout_alignParentEnd="true"
+     android:layout_marginTop="72dp"
+     android:layout_marginEnd="18dp"
+     android:background="@drawable/baseline_circle_24"
+     >
+
+  <!-- Icon Kompas Berputar -->
+  <ImageView
+      android:id="@+id/compass"
+      android:layout_width="22dp"
+      android:layout_height="22dp"
+      android:src="@drawable/baseline_navigation_24"
+      android:layout_gravity="center"
+      android:layout_margin="8dp"/>
+ </FrameLayout>
+
+ <!-- Geolocation -->
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/btn_location"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentStart="true"
+     android:layout_alignParentTop="true"
+     android:layout_marginStart="18dp"
+     android:layout_marginTop="72dp"
+     android:src="@drawable/baseline_my_location_24"
+     app:fabSize="mini"
+     android:backgroundTint="@color/white"/>
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/btn_ZoomOut"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentEnd="true"
+     android:layout_margin="16dp"
+     android:backgroundTint="@color/white"
+     android:src="@drawable/baseline_remove_24"
+     app:fabSize="mini"
+     android:elevation="4dp"
+     android:contentDescription="Zoom Out"
+     />
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:id="@+id/btn_ZoomIn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentEnd="true"
+     android:layout_marginEnd="16dp"
+     android:layout_marginBottom="76dp"
+     android:backgroundTint="@color/white"
+     android:src="@drawable/baseline_add_24"
+     app:fabSize="mini"
+     android:elevation="4dp"
+     android:contentDescription="Zoom In"
+     />
+
+</RelativeLayout>
